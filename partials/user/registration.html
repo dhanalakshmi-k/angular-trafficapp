@@ -1,0 +1,73 @@
+				
+					          		<h4 class="text-center">Registration</h4>
+					       <div class="container">
+					       <div class="row">
+					     <div class="col-md-10 col-md-offset-1">
+					        		<form class="form-horizontal" name="register" ng-submit="registerForm()">
+											<div class="form-group">
+												<label class="control-label col-sm-2">First Name</label>
+												<div class="col-sm-8">
+												<input type="text" name="firstname" placeholder="First Name" class="form-control" ng-model="user.firstName" autocomplete="off" ng-pattern="/^[a-zA-Z]*$/" required required/>
+												<span ng-show="register.firstname.$invalid && register.firstname.$touched ||register.firstname.$invalid && register.firstname.$dirty" class="index_error">
+								                  <span ng-show="register.firstname.$error.required">FirstName is required </span>
+								                </span>
+								                <span ng-show="register.firstname.$error.pattern" class="index_error">Alphabets Only.</span>
+				                             </div>
+											 </div>
+											 <div class="form-group">
+											
+												<label class="control-label col-sm-2">Last Name</label>
+												<div class="col-sm-8">
+												<input type="text" placeholder="Last Name" class="form-control" ng-model="user.lastName" name="lastname" ng-pattern="/^[a-zA-Z]*$/" required/>
+												<span ng-show="register.lastname.$invalid && register.lastname.$touched ||register.lastname.$invalid && register.lastname.$dirty" class="index_error">
+								                  <span ng-show="register.lastname.$error.required">LastName is required </span>
+								                </span>
+								                <span ng-show="register.lastname.$error.pattern" class="index_error">Alphabets Only.</span>
+										</div>	
+										</div>
+											 <div class="form-group">
+												<label class="control-label col-sm-2">Mobile Number</label>
+												<div class="col-sm-8">
+												<input type="text" placeholder="Mobile Number" class="form-control" ng-model="user.mobileNum" name="mobilenumber" maxlength="10" ng-pattern="/^[7-9][0-9]{9}$/"  required>
+												<span ng-show="register.mobilenumber.$invalid && register.mobilenumber.$touched ||register.mobilenumber.$invalid && register.mobilenumber.$dirty" class="index_error">
+								                  <span ng-show="register.mobilenumber.$error.required">Mobile number is required </span>
+								                </span>
+								                <span ng-show="register.mobilenumber.$error.pattern" class="index_error">Enter valid Mobile number</span>
+											</div>
+											</div>
+											 <div class="form-group">
+												<label class="control-label col-sm-2">Email</label>
+												<div class="col-sm-8">
+												<input type="text" placeholder="Email" class="form-control" ng-model="user.name" name="e_mail" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required />
+												<span ng-show="register.e_mail.$invalid && register.e_mail.$touched ||register.e_mail.$invalid && register.e_mail.$dirty" class="index_error">
+								                  <span ng-show="register.e_mail.$error.required">Email is required </span>
+								                </span>
+								                <span ng-show="register.e_mail.$error.pattern" class="index_error">Enter valid Email Id</span>
+											</div>
+											</div>
+								
+										 <div class="form-group">
+												<label class="control-label col-sm-2">Password</label>
+												<div class="col-sm-8">
+												<input type="password" placeholder="Password" class="form-control" ng-model="user.password" name="Password" ng-pattern= "/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/" required >
+												<span ng-show="register.Password.$invalid && register.Password.$touched ||register.Password.$invalid && register.Password.$dirty" class="index_error">
+								                  <span ng-show="register.Password.$error.required">Password is required </span>
+								                </span>
+								                <span ng-show="register.Password.$error.pattern" class="index_error">Password length must be 8 chars including letter, one special and one number  </span>
+										</div>
+										</div>
+										 <div class="form-group">
+												<label class="control-label col-sm-2">Conform Password</label>
+												<div class="col-sm-8">
+												<input type="password" placeholder="Conform Password" class="form-control" ng-model="user.confirmPass" name="cpassword" required>
+												 <span ng-show="pass!=cpassword" style="color:red;">Passwords have to match!</span> 
+										</div>
+									</div>
+					        	<div class="form-group text-center">		       	
+					        		<button type="submit" class="btn btn-success " ng-disabled="register.$invalid" >Register</button>
+				                </div>
+					       </div>
+					        </form> 
+					        </div>
+					       </div>
+					       </div>

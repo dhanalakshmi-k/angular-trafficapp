@@ -1,0 +1,14 @@
+
+<div class="container">
+	<ul class="col-md-4 photos" ng-repeat="x in catagory">
+		<li><img ng-src="{{x.img}}" style="width: 280px; height: 280px;"
+			class="img-responsive" />
+		<li>
+		<li><b> Img Id: </b>{{ x.id}}</li>
+
+		<!-- <b> Description: </b> {{x.Description}} -->
+		<li><b>Status : </b><i
+			ng-style="{'color': ((x.status == 'Approved') ? 'green' : (x.status == 'Rejected') ? 'red' : '') }">
+				{{x.status}} </i></li>
+	</ul>
+</div>
