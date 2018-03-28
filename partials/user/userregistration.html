@@ -12,8 +12,9 @@
 						<th>firstName</th>
 						<th>lastName</th>
 						<th>mobileNum</th>
-						<th>password</th>
-						<th>confirmPass</th>
+						<th>Edit</th>
+						<th>Profile</th>
+						<th>Delete</th>
 						
 						<!-- <th>View More</th> -->
 					</tr>
@@ -25,11 +26,13 @@
 							<td>{{x.firstName}}</td>
 							<td>{{x.lastName}}</td>
 							<td>{{x.mobileNum}}</td>
-							<td>{{x.password}}</td>
-							<td>{{x.confirmPass}}</td>
+							
 							
 							<td><button ui-sref="header.Editregister({userId:x.id})" class="btn btn-primary btn-lg">
           <span class="glyphicon glyphicon-edit"></span>
+        </button></td>
+        <td><button ui-sref="header.Pro({userId:x.id})" class="btn btn-primary btn-lg">
+          <span class="glyphicon glyphicon-user"></span>
         </button></td>
 							<td><a href="#" class="btn btn-danger btn-lg">
           <span class="glyphicon glyphicon-trash"></span>

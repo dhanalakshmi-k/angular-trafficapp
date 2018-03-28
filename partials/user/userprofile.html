@@ -1,315 +1,77 @@
 <div class="view">
-	<div ng-hide="details.editable" class="container bg">
+<div class="container backgnd">	
+	<div class="positn">
+	<div class="profile-name"> 
+		 	       	 <button class="edit1 btn btn-primary" ui-sref="header.Proedit({userId:user.id})">Edit</button>	
+		 	       	 <h2 class="text-center ">{{ user.firstName +" - " }} Profile</h2>
 
-		<div class="relative1">
-			<div class="profile-name">
-				<button class="edit1" ng-click="edit($index)"
-					ng-hide="details.editable">Edit</button>
-				<h2 class="text-center ">{{ details.fname +" - " }} Profile</h2>
-
-			</div>
-			<div class="absolute1" ng-controller="upload">
-				<div class="profile" title="Size should be 3.5cm X 4.5cm">
-					<img ng-src="{{filepreview}}"
-						class="mg-thumbnail img-responsive profilepic"
-						ng-show="filepreview" /> <img class="img-responsive profilepic"
-						class="img-thumbnail" src="images/user_profile_pic.jpg">
-				</div>
-
-				<!-- <input type="file" class="browse" fileinput="file" filepreview="filepreview"/> -->
-				<!-- <div>
-						 <input type="button"  ng-click="edit($index)" ng-hide="details.editable" value="upload photo">
-						</div> -->
-			</div>
-		</div>
-
-		<div class="col-md-8 col-md-offset-4">
-
-			<table class="border">
-				<tr>
-					<td>Full Name</td>
-					<td>:</td>
-					<td>{{ details.fname }} <span>{{ details.lname }}</span></td>
-				</tr>
-				<tr>
-					<td>Phone</td>
-					<td>:</td>
-					<td>{{ details.mobile }}</td>
-				</tr>
-				<tr>
-					<td>Email</td>
-					<td>:</td>
-					<td>{{ details.email }}</td>
-				</tr>
-				<tr>
-					<td>Email</td>
-					<td>:</td>
-					<td>{{ details.mobile }}</td>
-				</tr>
-				<tr>
-					<td>Date born</td>
-					<td>:</td>
-					<td>{{ details.dob }}</td>
-				</tr>
-				<tr>
-					<td>Address:</td>
-					<td></td>
-					<td>{{ details.add }}</td>
-				</tr>
-				<tr>
-					<td>State</td>
-					<td>:</td>
-					<td>{{ details.state }}</td>
-				</tr>
-				<tr>
-					<td>City</td>
-					<td>:</td>
-					<td>{{ details.city }}</td>
-				</tr>
-				<tr>
-					<td>zipcode</td>
-					<td>:</td>
-					<td>{{ details.zipcode }}</td>
-				</tr>
-				<tr>
-					<td><h4>Bank details</h4></td>
-
-				</tr>
-				<tr>
-					<td>Aadhar</td>
-					<td>:</td>
-					<td>{{ details.aadhar }}</td>
-				</tr>
-				<tr>
-					<td>Account Type</td>
-					<td>:</td>
-					<td>{{ details.select }}</td>
-				</tr>
-				<tr>
-					<td>IFSC Code</td>
-					<td>:</td>
-					<td>{{ details.ifsc }}</td>
-				</tr>
-				<tr>
-					<td>Branch Name</td>
-					<td>:</td>
-					<td>{{ details.brname }}</td>
-				</tr>
-				<tr>
-					<td>Account Number</td>
-					<td>:</td>
-					<td>{{ details.account }}</td>
-				</tr>
-				<tr>
-					<td>Bank Name</td>
-					<td>:</td>
-					<td>{{ details.bname }}</td>
-				</tr>
-
-			</table>
-
-		</div>
 
 	</div>
+				<div class="row">
+				<div class="col-md-4">
+			    <div class="absolute1">
+				<div class="profile" title="Size should be 3.5cm X 4.5cm">		
+							<img ng-src="{{filepreview}}" class="mg-thumbnail img-responsive profilepic">
+							
+				</div>
+				</div></div>
+		<div class="col-md-6 ">		
+				<!-- User Profile -->
+				<h3>Personal Details</h3>
+    				  <div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="Name">FirstName :<span class="mandatory">*</span></label> <b class="col-md-3 offset-md-3 "> {{ user.firstName }}</b>
+						</div>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="Name">LastName : <span class="mandatory">*</span></label> <b class="col-md-3 offset-md-3 ">{{ user.lastName }}</b>
+					</div>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="MobileNum">Mobile Num :<span class="mandatory">*</span> </label> <b class="col-md-3 offset-md-3 ">{{ user.mobileNum }}</b>
+					</div>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="Email">Email :<span class="mandatory">*</span> </label> <b class="col-md-3 offset-md-3 ">{{ user.name }}</b>
+					</div>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="DOB">Date Of Birth :<span class="mandatory">*</span></label> <b class="col-md-3 offset-md-3 "></b>
+					</div>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="Address">Address : <span class="mandatory">*</span></label><b class="col-md-3 offset-md-3 "></b>
+					</div>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="State">State : <span class="mandatory">*</span></label><b class="col-md-3 offset-md-3 "></b>
+					</div>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="City">City : <span class="mandatory">*</span></label><b class="col-md-3 offset-md-3 "></b>
+					</div>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="Zipcode">Zipcode : <span class="mandatory">*</span></label><b class="col-md-3 offset-md-3 "></b>
+					</div>
+					<h3>Bank Details</h3>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="Aadhar">Aadhar : <span class="mandatory">*</span></label><b class="col-md-3 offset-md-3 "></b>
+					</div>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="AccountType">Account Type : <span class="mandatory">*</span></label><b class="col-md-3 offset-md-3 "></b>
+					</div>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="IFSCCode">IFSC Code : <span class="mandatory">*</span></label><b class="col-md-3 offset-md-3 "></b>
+					</div>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="BranchName">Branch Name : <span class="mandatory">*</span></label><b class="col-md-3 offset-md-3 "></b>
+					</div>
+					<div class="form-group row">
+						<label class="control-label col-md-4 offset-md-2" for="AccountNumber">Account Number : <span class="mandatory">*</span></label><b class="col-md-3 offset-md-3 "></b>
+					</div>
+					<div class="form-group row">
+						<label class="control-label col-md-3 offset-md-3" for="BankName">Bank Name : <span class="mandatory">*</span></label><b class="col-md-3 offset-md-3 "></b>
+					</div>
+					</div>
+			
+</div>
+</div>
 </div>
 
-<!-- edit -->
-<div class="edit">
-	<div ng-show="details.editable" class="container bg">
-		<form name="myForm" novalidate>
-			<div class="relative1">
-				<div class="profile-name">
-					<button class="edit1" ng-click="edit($index)"
-						ng-hide="details.editable">Edit</button>
-					<h2 class="text-center">{{ details.fname +" - " }} Profile</h2>
-
-				</div>
-				<div class="absolute1" ng-controller="upload">
-					<div class="profile" title="Size should be 3.5cm X 4.5cm">
-						<img ng-src="{{filepreview}}"
-							class="mg-thumbnail img-responsive profilepic"
-							ng-show="filepreview" />
-						<!-- 	<img class="img-responsive profilepic" class="img-thumbnail" src="images/user_profile_pic.jpg"> -->
-					</div>
-
-					<input type="file" class="browse" fileinput="file"
-						filepreview="filepreview" />
-				</div>
-			</div>
-
-			<div class="col-md-8 col-md-offset-4">
-
-				<table class="border">
-					<tr>
-						<td>First Name<span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><input type="text" class="form-control" id="fname"
-							name="fname" ng-pattern="/^[a-zA-Z]*$/" ng-model="details.fname"
-							placeholder="first name here" autocomplete="off" required>
-							<span class="error-text"
-							ng-show="myForm.fname.$invalid && myForm.fname.$touched || myForm.fname.$invalid && myForm.fname.$dirty">
-								<span class="error-text" ng-show="myForm.fname.$error.required">*
-									FirstName is Required.</span> <span class="error-text"
-								ng-show="myForm.fname.$error.pattern">Hey! Only letters,
-									buddy!</span>
-						</span></td>
-					</tr>
-					<tr>
-						<td>Last Name<span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><input type="text" class="form-control" id="lname"
-							name="lname" autocomplete="off" ng-model="details.lname"
-							placeholder="last name here"></td>
-					</tr>
-					<tr>
-						<td>Phone<span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><input type="text" class="form-control" id="mobile1"
-							name="mobile" ng-pattern="/^[789]\d{9}$/"
-							ng-model="details.mobile"
-							placeholder="provide your mobile number" required /> <span
-							class="error-text"
-							ng-show="myForm.mobile.$invalid && myForm.mobile.$touched||myForm.mobile.$invalid && myForm.mobile.$dirty">
-								<span class="error-text" ng-show="myForm.mobile.$error.required">Mobile
-									number is required</span>
-						</span> <span class="error-text" ng-show="myForm.mobile.$error.pattern">Hey!
-								Enter a Valid Number, buddy!</span></td>
-					</tr>
-					<tr>
-						<td>Email<span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><input type="email" class="form-control" id="email"
-							name="email" ng-model="details.email"
-							ng-pattern="/[^@]+@[^@]+\.[a-zA-Z]{2,6}/" autocomplete="off"
-							placeholder="enter email id" required> <span
-							class="error-text"
-							ng-show="myForm.email.$invalid && myForm.email.$touched || myForm.email.$invalid && myForm.email.$dirty">
-								<span class="error-text" ng-show="myForm.email.$error.required">*
-									Email I'd Is Mandatory.</span> <span class="error-text"
-								ng-show="myForm.email.$error.pattern">Hey! Provide
-									Registered email id</span>
-						</span></td>
-					</tr>
-					<tr>
-						<td>Date born<span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><input type="text" class="form-control"
-							placeholder="mm/dd/yyyy" id="date" autocomplete="off"
-							ng-model="details.dob"></td>
-					</tr>
-					<tr>
-						<td>Address<span class="mandatory">*</span></td>
-						<td></td>
-						<td><input type="text" class="form-control" id="add"
-							ng-model="details.add" autocomplete="off" placeholder="address"></td>
-					</tr>
-					<tr>
-						<td>State<span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><input list="states" class="form-control" id="state"
-							autocomplete="off" ng-model="details.state"
-							placeholder="enter your state"> <datalist id="states">
-								<option value="Andaman and Nicobar Islands">
-								<option value="Andhra Pradesh">
-								<option value="Arunachal Pradesh">
-								<option value="Assam">
-								<option value="	Bihar">
-								<option value="Chandigarh">
-								<option value="Chhattisgarh">
-								<option value="Telangana">
-								<option value="Uttar Pradesh">
-								<option value="West Bengal">
-							</datalist></td>
-					</tr>
-					<tr>
-						<td>City<span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><input type="text" class="form-control" id="city"
-							ng-model="details.city" autocomplete="off"
-							placeholder="enter your city"> <span
-							ng-hide="details.editable">{{ details.city }}</span></td>
-					</tr>
-					<tr>
-						<td>zipcode<span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><input type="text" class="form-control" id="zipcode"
-							ng-model="details.zipcode" autocomplete="off"
-							placeholder="enter your city code"> <span
-							ng-hide="details.editable">{{ details.zipcode }}</span></td>
-					</tr>
-
-					<!-- bank details -->
-
-
-					<tr>
-						<td>Aadhar Number <span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><input type="text" class="form-control" id="aadhar2"
-							name="aadhar" ng-pattern="/[0-9]{12}/" ng-minlength="12"
-							ng-maxlength="12" ng-model="details.aadhar" autocomplete="off"
-							placeholder="enter your aadhar number" required> <span
-							class="error-text"
-							ng-show="myForm.aadhar.$invalid && myForm.aadhar.$touched || myForm.aadhar.$invalid && myForm.aadhar.$dirty">
-								<span class="error-text" ng-show="myForm.aadhar.$error.required">*
-									Aadhar Is Mandatory.</span> <span class="error-text"
-								ng-show="myForm.aadhar.$error.pattern && myForm.aadhar.$error.minlength">Hey!
-									Provide valid Aadhar Number please !</span>
-						</span> <span class="error-text" ng-show="myForm.aadhar.$error.maxlength">It's
-								not a valid number.</span></td>
-					</tr>
-					<tr>
-						<td>Select Account Type <span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><select class="form-control" id="select"
-							autocomplete="off" ng-model="details.select">
-								<option disabled selected hidden>Please choose account
-									type</option>
-								<option>Savings Account</option>
-								<option>Current Account</option>
-								<option>Checking Account</option>
-						</select></td>
-					</tr>
-					<tr>
-						<td>IFSC Code <span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><input type="text" class="form-control"
-							autocomplete="off" ng-model="details.ifsc" id="ifsc"
-							placeholder="IFSC code"></td>
-					</tr>
-					<tr>
-						<td>Branch Name <span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><input type="text" class="form-control" id="brname"
-							autocomplete="off" ng-model="details.brname"
-							placeholder="enter your branch name"></td>
-					</tr>
-					<tr>
-						<td>Account Number</td>
-						<td>:</td>
-						<td><input type="text" class="form-control" id="account"
-							autocomplete="off" ng-model="details.account"
-							placeholder="bank account number"></td>
-					</tr>
-					<tr>
-						<td>Bank Name <span class="mandatory">*</span></td>
-						<td>:</td>
-						<td><input type="text" class="form-control" id="bname"
-							autocomplete="off" ng-model="details.bname"
-							placeholder="enter your bank name"></td>
-					</tr>
-				</table>
-
-			</div>
-			<div class="container">
-				<div class="col-md-12">
-					<div class="pull-right savedetails">
-
-						<button type="button" class="btn btn-primary" ng-click="save()">Save</button>
-					</div>
-				</div>
-			</div>
-		</form>
-	</div>
 </div>
 
 
+</div>
+</div>

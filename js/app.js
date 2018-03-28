@@ -35,6 +35,7 @@ trafficApp.run(function ($rootScope, $location, $cookieStore, UserService) {
         $rootScope.accessToken = accessToken;
         UserService.get(function (user) {
             $rootScope.user = user;
+            console.log($rootScope.user)
             $location.path(originalPath);
         });
     }
@@ -70,7 +71,7 @@ function CreateController($scope, $location, BlogPostService) {
 
     $scope.save = function () {
         $scope.blogPost.$save(function () {
-            $location.path('/');
+            //$location.path('/');
         });
     };
 }

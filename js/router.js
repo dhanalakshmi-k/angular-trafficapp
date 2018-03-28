@@ -30,11 +30,16 @@ trafficApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
 		templateUrl: "partials/user/usernotification.html",
 		controller:'notificationCtrl'
 	})
-	.state('header.Profile', {
-		url: "/Profile",
-		templateUrl: "partials/user/userprofile.html",
-		controller:"profileCtrl"
-	})
+//	.state('header.Profile', {
+//		url: "/Profile/:userId",
+//		templateUrl: "partials/user/userprofile.html",
+//		controller:"profileCtrl"
+//	})
+//	.state('header.Profile', {
+//		url: "/Profile/:userId",
+//		templateUrl: "partials/user/userprofile.html",
+//		controller:"profileCtrl"
+//	})
 	.state('header.Report', {
 		url: "/Report",
 		templateUrl: "partials/user/userreport.html",
@@ -57,6 +62,19 @@ trafficApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
 			controller:"EditCtrl"
 		
 	})
+	.state('header.Pro', {
+		url: "/Profile/:userId",
+	templateUrl: "partials/user/userprofile.html",
+		controller:"profileCtrl"
+		
+	})
+	.state('header.Proedit', {
+		url: "/Profile/:userId",
+	templateUrl: "partials/user/userprofileedit.html",
+		controller:"profileCtrl"
+		
+	})
+	
 
 	      /*user-routing end*/
 

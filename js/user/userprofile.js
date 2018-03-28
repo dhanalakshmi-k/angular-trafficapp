@@ -1,13 +1,26 @@
-trafficApp.controller("profileCtrl", function($scope, $http, $window){
-       $http.get("https://api.myjson.com/bins/9o5e9").then(function(response){
-                 $scope.details = response.data;
-				  $scope.edit = function(){
-				  $scope.details.editable = true;			
-		};
-		          $scope.save = function(){
-				  $scope.details.editable = false;			
-		};
-	            
-		});   
+trafficApp.controller("profileCtrl", function($http,$scope,ProfileService,$state,$stateParams){
+
+	$scope.$on('$viewContentLoaded',function(){
+		$scope.show();
+		$scope.user = {};
+	})
+	$scope.show = function(){
+		debugger;
+		ProfileService.userpro($stateParams.userId).then(function(data){
+		$scope.user = data; 
+		console.log($scope.user.id);
+		console.log($scope.user);
+		},function(err){
+		if(err){
+		$scope.errorMessage = err;
+		}
+		})
+		}
+	
+	
+	
+	
+	
+	
 
 	});

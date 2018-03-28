@@ -1,4 +1,3 @@
-
 trafficApp.service("EditService",function($q,$http){
 		return{
 		useredit:function(id){
